@@ -46,14 +46,16 @@ body {
     color: #fff;
     padding: 5px;
     text-decoration: none;
+    transition-duration: 0.3s;
 }
 .nav-list a[aria-current="page"] {
     font-weight: bold;
     text-decoration: underline;
+    color: rgb(251, 216, 59);
 }
 /*CSS för rubriker*/
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 25px;
     line-height: 1.1;
 }
@@ -67,7 +69,7 @@ h2 {
     font-size: 1.1rem;
     line-height: 1.5;
 }
-blockquote {
+.quote {
     font-size: 1.2rem;
     border-left: 2px solid #203748;
     margin: 20px 0;
@@ -76,6 +78,31 @@ blockquote {
 }
 blockquote p {
     margin: 0;
+}
+.portrait-quote {
+    margin-top: 30px;
+    background-color: #e8eef4;
+    border-left: 2px solid #203748;
+    padding: 0px;
+}
+.portrait-quote blockquote{
+    padding: 20px 15px;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+}
+.portrait-quote .portrait-image {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+.portrait-quote > p {
+    margin: 0;
+    padding: 0 15px 20px;
+}
+.quote, .portrait-quote {
+    font-style: italic;
 }
 .main-content li + li {
     margin-top: 7px;
@@ -108,4 +135,27 @@ blockquote p {
 .footer-nav a[aria-current="page"] {
     text-decoration: underline;
     font-weight: bold;
+    color: rgb(251, 216, 59);
+}
+a:focus-visible {
+    outline: 2px solid rgb(251, 216, 59);
+    outline-offset: 4px;
+}
+.nav-list a:hover, .footer-nav a:hover {
+    text-decoration-thickness: 3px;
+    color: rgb(251, 216, 59)
+}
+/*CSS för större skärmar*/
+@media (min-width: 768px) {
+    .nav-list, .footer-nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .portrait-image {
+        width: 100%;
+    }
+    .portrait-quote {
+        margin-top: 40px;
+    } 
 }
