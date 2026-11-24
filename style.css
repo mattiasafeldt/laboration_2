@@ -21,6 +21,10 @@ body {
     max-width: 100%;
     margin: 25px auto;
 }
+.image {
+    border: 1px solid #203748;
+    border-radius: 3px;
+}
 /*CSS för sidhuvud*/
 .site-header {
     text-align: center;
@@ -51,7 +55,7 @@ body {
 .nav-list a[aria-current="page"] {
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(251, 216, 59);
+    color: rgb(231, 199, 53);
 }
 /*CSS för rubriker*/
 h1 {
@@ -135,15 +139,18 @@ blockquote p {
 .footer-nav a[aria-current="page"] {
     text-decoration: underline;
     font-weight: bold;
-    color: rgb(251, 216, 59);
+    color: rgb(231, 199, 53);
+}
+.footer-nav a:hover {
+    transition-duration: 0.3s;
 }
 a:focus-visible {
-    outline: 2px solid rgb(251, 216, 59);
+    outline: 2px solid rgb(231, 199, 53);
     outline-offset: 4px;
 }
 .nav-list a:hover, .footer-nav a:hover {
     text-decoration-thickness: 3px;
-    color: rgb(251, 216, 59)
+    color: rgb(231, 199, 53);
 }
 /*CSS för större skärmar*/
 @media (min-width: 768px) {
